@@ -3,7 +3,6 @@
 DirectoryIndex index.php index.html
 
 Options -Indexes
-Options +FollowSymlinks
 
 RewriteEngine Off
 #RewriteCond %{HTTP_HOST} !^www\.(.*) [NC]
