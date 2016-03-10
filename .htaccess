@@ -2,9 +2,10 @@
 
 DirectoryIndex index.php index.html
 
-Options -Indexes
+Options -Indexes +FollowSymlinks
+Options Indexes Includes 
 
-RewriteEngine Off
+RewriteEngine On
 #RewriteCond %{HTTP_HOST} !^www\.(.*) [NC]
 #RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
 RewriteCond %{REQUEST_URI} !^(/img|/media|/kcaptcha|/debug/upload|/admin|/index.php|/favicon.ico|/cron|/pma|/sitemap.txt|/sitemap.xml|/robots.txt|/swf|/redirects.php|/xxs.php|/storage|/yandex*)
