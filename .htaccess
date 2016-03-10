@@ -3,15 +3,16 @@
 DirectoryIndex index.php index.html
 
 Options -Indexes
+Options +FollowSymlinks
 
-RewriteEngine On
+RewriteEngine Off
 #RewriteCond %{HTTP_HOST} !^www\.(.*) [NC]
 #RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
-RewriteCond %{REQUEST_URI} !^(/img|/media|/kcaptcha|/upload|/admin|/index.php|/favicon.ico|/cron|/pma|/sitemap.txt|/sitemap.xml|/robots.txt|/swf|/redirects.php|/xxs.php|/storage|/yandex*)
+RewriteCond %{REQUEST_URI} !^(/img|/media|/kcaptcha|/debug/upload|/admin|/index.php|/favicon.ico|/cron|/pma|/sitemap.txt|/sitemap.xml|/robots.txt|/swf|/redirects.php|/xxs.php|/storage|/yandex*)
 RewriteRule ^(.+)$ /index.php?url=$1 [L,QSA]
 
 <ifModule mod_expires.c>
-    ExpiresActive Off
+    ExpiresActive On
     # по умолчанию кеш в 5 секунд
     ExpiresDefault "access plus 5 seconds"
     # кэшировать флэш и изображения на месяц
