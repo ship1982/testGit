@@ -5,6 +5,7 @@ DirectoryIndex index.php index.html
 Options -Indexes+123
 #Локальные изменения
 #Серия локальных изменений + еще
+#Новая строка
 RewriteEngine On
 RewriteEngine Off
 #RewriteCond %{HTTP_HOST} !^www\.(.*) [NC]
