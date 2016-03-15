@@ -1,7 +1,7 @@
 ﻿AddDefaultCharset utf-8
 
 DirectoryIndex index.php index.html
-
+#Серверные изменения
 Options -Indexes+123
 
 RewriteEngine On
